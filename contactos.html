@@ -13,11 +13,11 @@
             <div class="container">
                 <div class="navbar">
                     <div class="logo">
-                        <img src="./logo.png" width="125px">
+                        <img src="./imagens/logo.png" width="125px">
                     </div>
                     <nav>
                         <ul>
-                            <li><a href="./index.html">Inicio</a></li>
+                            <li><a href="./index.php">Inicio</a></li>
                             <li><a href="./sobre.html">Sobre Nós</a></li>
                             <li><a href="./contactos.html">Contactos</a></li>
                             <li><a href="./produtos.html">Produtos</a></li>
@@ -35,7 +35,7 @@
             <div class="contact-box">
                 <div class="contact-left">
                     <h3>Envie o seu pedido</h3>
-                    <form>
+                    <form action="https://formsubmit.co/apiserpa@gmail.com" method="POST">
                         <div class="input-row">
                             <div class="input-group">
                                 <label>Nome</label>
@@ -85,13 +85,29 @@
                     
             </div>
             </div>
+            <script src="https://smtpjs.com/v3/smtp.js"></script>
+            <script>
+                function enviaremail(){
+                    Email.send({
+    Host : "smtp.elasticemail.com",
+    Username : "username",
+    Password : "password",
+    To : 'apiserpa@gmail.com',
+    From : "you@isp.com",
+    Subject : "This is the subject",
+    Body : "And this is the body"
+}).then(
+  message => alert(message)
+);
+                }
+            </script>
             <!------rodapé------->
             <footer>
         <div class="footer">
             <div class="container">
                 <div class="row">
                     <div class="footer-col-1">
-                        <img src="./apiserpa1.png">
+                        <img src="./imagens/apiserpa1.png">
                         
                     </div>
                     <div class="footer-col-2">
@@ -102,10 +118,10 @@
                     </div>
                     <div class="footer-col-3">
                         <h3> Visite as nossas redes sociais</h3>
-                        <a href="https://www.facebook.com/"><img src="./facebook.png" ></a>
-                        <a href="https://www.instagram.com/"><img src="./instagram.png"></a>
-                        <a href="https://twitter.com/"><img src="./twitter.png"></a><br>
-                        <img src="./livro.png" width="128px">
+                        <a href="https://www.facebook.com/"><img src="./imagens/facebook.png" ></a>
+                        <a href="https://www.instagram.com/"><img src="./imagens/instagram.png"></a>
+                        <a href="https://twitter.com/"><img src="./imagens/twitter.png"></a><br>
+                        <img src="./imagens/livro.png" width="128px">
                     </div>
                 </div>
             </div>
